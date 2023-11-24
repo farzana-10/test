@@ -1,0 +1,22 @@
+# This workflow will build a MuleSoft project and deploy to CloudHub
+name: Cloudhub deployment with Maven
+on:
+  push:
+    branches: [ master ]
+#  pull_request:
+#    types:
+#      - closed
+#    branches: [ development, test ]
+jobs:
+  BuildAndDeploy_if_merged_master:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    environment: Sandbox
+    env:
+        GLOBAL_MULE_ENV: ${{ MULE_ENV }}
+        GLOBAL_APP_TAG: "Sandbox"
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Deploy with Maven
+      run: mvn -s settings.xml -DskipTests deploy -DmuleDeploy
