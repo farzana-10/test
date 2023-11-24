@@ -4,7 +4,7 @@
 
 	<groupId>646636c1-67ba-4a83-9da6-b04d614272a5</groupId>
 	<artifactId>cicd-test</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>cicd-test</name>
@@ -34,13 +34,12 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.4.0</muleVersion>
 						<applicationName>farzana-test-cicd-version</applicationName>
-						<environment>${env.GLOBAL_ENVIRONMENT}</environment>
+						<environment>${env.GLOBAL_MULE_ENV}</environment>
 						<region>US</region>
 						<workers>1</workers>
 						<workerType>micro</workerType>
 						<objectStoreV2>true</objectStoreV2>
 						<properties>
-							<mule.env>${env.GLOBAL_MULE_ENV}</mule.env>
 							<anypoint.platform.client_id>af7104749b974f3e90ee801a48e30f13</anypoint.platform.client_id>
 							<anypoint.platform.client_secret>11ad159069dF4995a1Eb1de25300E1Bb</anypoint.platform.client_secret>
 						</properties>
