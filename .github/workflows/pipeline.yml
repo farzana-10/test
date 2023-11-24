@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: Sandbox
     env:
-        GLOBAL_MULE_ENV: ${{ MULE_ENV }}
+        GLOBAL_MULE_ENV: ${{ secrets.MULE_ENV }}
         GLOBAL_APP_TAG: "Sandbox"
     steps:
     - name: Checkout repository
