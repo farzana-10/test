@@ -36,8 +36,8 @@
 						<applicationName>farzana-test-cicd-version</applicationName>
 						<environment>${env.GLOBAL_ENVIRONMENT}</environment>
 						<region>US</region>
-						<workers>0.1</workers>
-						<workerType>1</workerType>
+						<workers>1</workers>
+						<workerType>micro</workerType>
 						<objectStoreV2>true</objectStoreV2>
 						<properties>
 							<mule.env>${env.GLOBAL_MULE_ENV}</mule.env>
