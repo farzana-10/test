@@ -14,7 +14,7 @@ jobs:
     environment: Sandbox
     env:
         GLOBAL_MULE_ENV: ${{ secrets.MULE_ENV }}
-        GLOBAL_APP_TAG: "Sandbox"
+        GLOBAL_APP_TAG: "sandbox"
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
