@@ -2,18 +2,18 @@
 name: Cloudhub deployment with Maven
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 #  pull_request:
 #    types:
 #      - closed
 #    branches: [ development, test ]
 jobs:
-  BuildAndDeploy_if_merged_master:
-    if: github.ref == 'refs/heads/master'
+  BuildAndDeploy_if_merged_main:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: Sandbox
     env:
-        GLOBAL_MULE_ENV: ${{ MULE_ENV }}
+        GLOBAL_MULE_ENV: ${{ secrets.MULE_ENV }}
         GLOBAL_APP_TAG: "Sandbox"
     steps:
     - name: Checkout repository
