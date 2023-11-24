@@ -23,50 +23,16 @@
 	</pluginGroups>
 	<profiles>
 		<profile>
-			<id>archetype-repository</id>
+			<id>standard-repositories</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<repositories>
 				<repository>
-					<id>mule-ee</id>
-					<name>Mule Nexus Repository</name>
-					<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+					<id>anypoint-exchange-v3</id>
+					<name>Anypoint Exchange</name>
+					<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 					<layout>default</layout>
-					<releases>
-						<enabled>true</enabled>
-					</releases>
-					<snapshots>
-						<enabled>true</enabled>
-					</snapshots>
-				</repository>
-				<repository>
-					<id>mulesoft-releases</id>
-					<name>MuleSoft Repository</name>
-					<url>http://repository.mulesoft.org/releases/</url>
-					<layout>default</layout>
-				</repository>
-				<repository>
-					<id>mulesoft-snapshots</id>
-					<name>MuleSoft Snapshot Repository</name>
-					<url>http://repository.mulesoft.org/snapshots/</url>
-					<layout>default</layout>
-				</repository>
-				<repository>
-					<id>mulesoft-public</id>
-					<name>MuleSoft Public Repository</name>
-					<url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
-					<layout>default</layout>
-				</repository>
-				<repository>
-					<id>archetype</id>
-					<name>Mule Repository</name>
-					<url>https://repository-master.mulesoft.org/nexus/content/repositories/public</url>
-					<releases>
-						<enabled>true</enabled>
-						<checksumPolicy>fail</checksumPolicy>
-					</releases>
-					<snapshots>
-						<enabled>true</enabled>
-						<checksumPolicy>warn</checksumPolicy>
-					</snapshots>
 				</repository>
 			</repositories>
 		</profile>
